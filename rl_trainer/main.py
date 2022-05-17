@@ -107,7 +107,7 @@ def main(args):
         state = env.reset()
         if RENDER:
             env.env_core.render()
-        obs_ctrl_agent = np.array(state[ctrl_agent_index]['obs']).flatten()
+        obs_ctrl_agent = np.array(state[ctrl_agent_index]['obs']['agent_obs']).flatten()
         obs_oppo_agent = np.array(state[1-ctrl_agent_index]['obs'])   #[40,40]
 
         episode += 1
